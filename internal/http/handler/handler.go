@@ -7,11 +7,13 @@ import (
 type Handler struct {
 	General *GeneralHandler
 	Home    *HomeHandler
+	Payme   *PaymeHandler
 }
 
 func NewHandler(e *echo.Echo) *Handler {
 	return &Handler{
 		General: NewGeneralHandler(),
 		Home:    NewHomeHandler(),
+		Payme:   NewPaymeHandler(),
 	}
 }
