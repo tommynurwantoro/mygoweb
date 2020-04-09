@@ -16,4 +16,4 @@
 
 .vscode/
 .env
-static_config.yaml
+*.yaml
