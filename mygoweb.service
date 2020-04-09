@@ -1,0 +1,17 @@
+# Copy this file to /lib/systemd/system/ folder
+[Unit]
+Description=mygoweb
+
+[Service]
+Type=simple
+User=root
+
+Restart=on-failure
+RestartSec=10
+
+# Edit /root/project/ to your project directory
+WorkingDirectory=/root/project/mygoweb
+ExecStart=/root/project/mygoweb/bin/me
+
+[Install]
+WantedBy=multi-user.target
