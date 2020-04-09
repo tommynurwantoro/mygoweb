@@ -7,13 +7,12 @@ mod:
 build:
 	go build -o bin/mygoweb cmd/web/main.go
 
-bin:
+run: pretty mod build
 	./bin/mygoweb
-
-run: pretty mod build bin
 
 deploy:
 	sudo cp mygoweb.service /lib/systemd/system/mygoweb.service
 
 # Only for development
-dev: build bin
+dev: build
+	./bin/mygoweb
