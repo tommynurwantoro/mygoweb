@@ -8,6 +8,7 @@ type Handler struct {
 	General *GeneralHandler
 	Home    *HomeHandler
 	Payme   *PaymeHandler
+	Blog    *BlogHandler
 }
 
 func NewHandler(e *echo.Echo) *Handler {
@@ -15,5 +16,6 @@ func NewHandler(e *echo.Echo) *Handler {
 		General: NewGeneralHandler(),
 		Home:    NewHomeHandler(),
 		Payme:   NewPaymeHandler(),
+		Blog:    NewBlogHandler(),
 	}
 }
