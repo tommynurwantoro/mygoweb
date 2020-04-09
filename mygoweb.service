@@ -11,7 +11,7 @@ RestartSec=10
 
 # Edit /root/project/ to your project directory
 WorkingDirectory=/root/project/mygoweb
-ExecStart=/root/project/mygoweb/bin/me
+ExecStart=/root/project/mygoweb/bin/mygoweb
 
 [Install]
 WantedBy=multi-user.target
